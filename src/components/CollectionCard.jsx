@@ -2,7 +2,7 @@ import React from "react";
 
 const CollectionCard = ({ image, title, places }) => {
   return (
-    <div className="w-20 lg:w-64 h-28 lg:h-80 rounded-xl overflow-hidden relative cursor-pointer shadow-lg transition-all duration-300 hover:scale-105">
+    <div className="w-28 lg:w-64 h-36 lg:h-80 rounded-xl overflow-hidden relative cursor-pointer shadow-lg transition-all duration-300 hover:scale-105">
       <img
         src={image}
         alt={title}

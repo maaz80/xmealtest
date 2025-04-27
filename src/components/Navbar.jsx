@@ -78,7 +78,7 @@ const Navbar = ({ searchTerm, setsearchTerm }) => {
 
       {/* Mobile view  */}
       <div className="flex lg:hidden justify-center flex-col">
-        <div className="flex items-center justify-between py-4 px-2 lg:px-52">
+        <div className="flex items-center justify-between py-2 lg:py-4 px-2 lg:px-52">
           <div className="text-xl lg:text-3xl font-bold italic text-gray-800">XMeals</div>
 
           {/* Auth Buttons */}
@@ -95,14 +95,14 @@ const Navbar = ({ searchTerm, setsearchTerm }) => {
           </div>
         </div>
 
-        <div className="flex items-center w-[98%] justify-center bg-white border rounded-full shadow-sm px-2 py-2 ">
+        <div className="flex items-center w-full justify-center bg-white border rounded-full shadow-sm px-2 py-2 ">
           <div className="flex items-center mr-4 text-gray-600">
             <FaMapMarkerAlt className="text-pink-500 mr-1" />
-            <span>Lucknow</span>
+            <span className="text-sm lg:text-base">Lucknow</span>
             <FaChevronDown className="ml-2 text-xs" />
           </div>
 
-          <div className="h-5 border-l mx-3"></div>
+          <div className="h-5 border-l mx-1 lg:mx-3"></div>
 
           {/* Search */}
           <div className="flex items-center flex-1">
@@ -111,6 +111,8 @@ const Navbar = ({ searchTerm, setsearchTerm }) => {
               type="text"
               placeholder="Search for restaurant, cuisine or a dish"
               className="w-full outline-none text-sm text-gray-600"
+              value={searchTerm}
+              onChange={(e) => setsearchTerm(e.target.value)}
             />
           </div>
         </div>
